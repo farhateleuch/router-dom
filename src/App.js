@@ -1,18 +1,19 @@
 import React from 'react'
-import Address from './Component/Profile.js/Address'
-import Name from './Component/Profile.js/Name'
-import ProfilePhoto from './Component/Profile.js/ProfilePhoto'
+import Profile from './profile/Profile'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
+
 
 
 function App() {
   return (
-    <div style={{backgroundColor:'cornflowerblue'}}   >
-      <Name/>
-     <ProfilePhoto/>
-      <Address/>
-    </div>
+    <div>
+      <Profile   fullName='farhat eleuch' bio='human' profession='web devopler' > ./pdp.jpg  </Profile>  
+  
+  
+   </div>
   )
 }
 
 export default App
+

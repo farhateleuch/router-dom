@@ -1,19 +1,20 @@
-import React from 'react'
-import Profile from './profile/Profile'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css'
+import React, { Component } from 'react'
+import ClassComponent from './companent/ClassComponent'
 
+export default class App extends Component {
+ constructor(props){
+   super(props)
+   this.state={show:true}
+  }
+  render() {
+    console.log(this.state.show)
 
-
-function App() {
-  return (
-    <div>
-      <Profile   fullName='farhat eleuch' bio='human' profession='web devopler' > ./pdp.jpg  </Profile>  
-  
-  
-   </div>
-  )
+    return (
+      <div>
+       {this.state.show && <ClassComponent/>}
+     
+     <button onClick={()=>this.setState({show:!this.state.show})}>show | hide </button>
+      </div>
+    )
+  }
 }
-
-export default App
-

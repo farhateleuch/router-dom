@@ -3,8 +3,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBarr from './Companants/NavBarr';
 import MovieList from './Companants/MovieList';
 import {moviesData} from './data'
-import react,{useState} from 'react'
+import {useState} from 'react'
 import AddNewMovie from './Companants/AddNewMovie'
+
+import {
+  
+  Routes,
+  Route
+} from "react-router-dom";
 
 
 
@@ -23,9 +29,12 @@ function App() {
   return (
     <div>
       <NavBarr filter={filteringMovies} />
-      <AddNewMovie  fun={addingNewMovie}  />
-      <MovieList Movies={Movies} />
-
+      <Routes>
+      <Route exact path="/" element={<> <MovieList Movies={Movies} /> </>}/>
+      <Route path="/addnew" element={<><AddNewMovie fun={addingNewMovie}/>  </>}/>
+     
+      </Routes>
+       
     </div>
   )
 }

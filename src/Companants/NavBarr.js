@@ -45,7 +45,7 @@ const [title, setTitle] = useState('')
           onChange={(e)=>setTitle(e.target.value)}
         />
         </Form>
-        <Button onClick={()=>filter(rating,title)} >Search</Button>
+        <Button onClick={()=>filter(rating,title.toLowerCase())} >Search</Button>
       
 
       </Nav>
